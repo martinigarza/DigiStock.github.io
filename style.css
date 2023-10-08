@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+}
+.title1 {
+    color: white;
+}
+
+.navbar {
+    background-color: #141E46;
+    color: #FFF5E0;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #FFF5E0;
+    text-decoration: none;
+    font-weight: bold;
+}
+.carrito-icon {
+    width: 28px;
+}
+
+.hero {
+    background-image: url('https://cdn.shopify.com/s/files/1/0098/7247/4167/files/tipos-de-computadoras-1.jpg?v=1614119093');
+    background-size: auto;
+    color: #FFF5E0;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.footer-text {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column; 
+    }
+
+    .gallery img {
+        width: 100%; 
+        margin: 10px 0; 
+        height: auto; 
+    }
+}
+
+.contact {
+    background-color: #FFF5E0;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.footer {
+    background-color: #141E46;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
