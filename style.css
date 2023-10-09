@@ -1,78 +1,165 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    color: black;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  color: black;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.menu-button {
+  display: none;
+}
+
 .title1 {
-    color: white;
+  color: white;
 }
 
 .navbar {
-    background-color: #141E46;
-    color: #FFF5E0;
-    padding: 10px 0;
+  background-color: #141e46;
+  color: #fff5e0;
+  padding: 10px 0;
 }
 
 .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
 .nav-links a {
-    color: #FFF5E0;
-    text-decoration: none;
-    font-weight: bold;
+  color: #fff5e0;
+  text-decoration: none;
+  font-weight: bold;
 }
 .carrito-icon {
-    width: 28px;
+  width: 28px;
 }
 
 .hero {
-    background-image: url('https://cdn.shopify.com/s/files/1/0098/7247/4167/files/tipos-de-computadoras-1.jpg?v=1614119093');
-    background-size: auto;
-    color: #FFF5E0;
-    text-align: center;
-    padding: 100px 0;
+  /* background-image: url("https://cdn.shopify.com/s/files/1/0098/7247/4167/files/tipos-de-computadoras-1.jpg?v=1614119093"); */
+  background-image: url("https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff5e0;
+  text-align: center;
+  padding: 100px 0;
 }
 
-.footer-text {
-    color: white;
+.text-hero {
+  margin-bottom: 20px;
+  background-color: #141e46ac;
+  color: white;
+  padding: 80px 0;
 }
 
-@media (max-width: 768px) {
-    .gallery {
-        flex-direction: column; 
-    }
+.text-hero h2 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
 
-    .gallery img {
-        width: 100%; 
-        margin: 10px 0; 
-        height: auto; 
-    }
+.text-hero p {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .contact {
-    background-color: #FFF5E0;
-    text-align: center;
-    padding: 60px 0;
+  background-color: #fff5e0;
+  text-align: center;
+  padding: 60px 0;
 }
 
 .footer {
-    background-color: #141E46;
-    color: #fff;
-    text-align: center;
+  background-color: #141e46;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-text {
+  color: white;
+}
+
+@keyframes menuAnimationIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes menuAnimationOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+  }
+
+  .gallery img {
+    width: 100%;
+    margin: 10px 0;
+    height: auto;
+  }
+}
+
+@media (width < 600px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
     padding: 10px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #141e46;
+    color: #fff5e0;
+    animation: menuAnimationOut 0.5s ease-in-out;
+  }
+
+  .active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141e46;
+    color: #fff5e0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    animation: menuAnimationIn 0.5s ease-in-out;
+  }
+
+  .menu-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #141e46;
+    color: #fff5e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
