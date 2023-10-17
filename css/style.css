@@ -59,6 +59,12 @@ body {
   padding: 100px 0;
 }
 
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .text-hero {
   margin-bottom: 20px;
   background-color: #141e46ac;
@@ -80,6 +86,7 @@ body {
 
 .contact {
   background-color: #fff5e0;
+  height: 707px;
   text-align: center;
   padding: 60px 0;
 }
