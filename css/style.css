@@ -64,6 +64,9 @@ form input {
 
 .custom-nav-links ul {
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .custom-nav-links li {
