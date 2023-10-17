@@ -4,6 +4,31 @@ body {
   padding: 0;
 }
 
+.jumbotron {
+  background-color: #141e46;
+  color: #fff5e0;
+  padding: 100px 0;
+}
+
+.tiny-jumbotron {
+  background-color: #141e46;
+  color: #fff5e0;
+  padding: 50px 0;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Form */
+form input {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -29,18 +54,24 @@ body {
   padding: 10px 0;
 }
 
-.nav-links {
+.custom-nav-links {
+  display: flex;
+  align-items: baseline;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-links li {
+.custom-nav-links ul {
+  margin: 0;
+}
+
+.custom-nav-links li {
   display: inline;
   margin-right: 20px;
 }
 
-.nav-links a {
+.custom-nav-links a {
   color: #fff5e0;
   text-decoration: none;
   font-weight: bold;
@@ -63,6 +94,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 30px 0px;
 }
 
 .text-hero {
@@ -72,10 +105,11 @@ body {
   padding: 80px 0;
 }
 
-.text-hero h2 {
+h2 {
   font-size: 40px;
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .text-hero p {
@@ -90,8 +124,6 @@ body {
   padding: 60px 0;
 }
 
-
-
 .footer {
   background-color: #141e46;
   color: #fff;
@@ -99,21 +131,21 @@ body {
   padding: 10px 0;
 }
 
-
 /*a ver que onda*/
 
-#popular, #top-rated {
+#popular,
+#top-rated {
   text-align: center;
-  }
+}
 
-#top-rated h2{
+#top-rated h2 {
   margin: 30px 0px;
 }
 #popular h1 {
   margin: 30px 0px;
 }
 
-.prod-item{
+.prod-item {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -126,38 +158,37 @@ body {
   transform-origin: center left;
 }
 
-.prod-grid{
-  display: grid;   
-  grid-template-columns: repeat(4,1fr);
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   row-gap: 20px;
 }
 
-.prod-item-img{
+.prod-item-img {
   width: 200px;
   height: 300px;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
-.container2{
+.container2 {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-
-.prod-scroller{
+.prod-scroller {
   overflow-x: scroll;
   overflow-y: hidden;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding:0px 0px 60px 0px;
+  padding: 0px 50px 60px 0px;
 }
 
-.prod-item-v2{
+.prod-item-v2 {
   border-radius: 20px;
-  width: 340px;    
+  width: 340px;
   min-width: 340px;
   font-size: 20px;
   cursor: pointer;
@@ -166,15 +197,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
   transition: all 450ms;
-  transform-origin: center left;   
+  transform-origin: center left;
 }
 
 .wrapper {
-  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   width: 100%;
-  min-height: calc(200px*1.5);
-  height: calc(200px*1.5);
+  min-height: calc(200px * 1.5);
+  height: calc(200px * 1.5);
   overflow: hidden;
 }
 
@@ -200,10 +231,6 @@ body {
 .prod-item-detail-title-v2:hover {
   color: #b1dd00;
 }
-
-
-
-
 
 .footer-text {
   color: white;
@@ -335,7 +362,7 @@ body {
 }
 
 @media (width < 600px) {
-  .nav-links {
+  .custom-nav-links {
     display: none;
     width: 100%;
     margin-top: 10px;
@@ -373,40 +400,28 @@ body {
   }
 }
 
-
-
-
 /* TABLETS */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  h2{
-      font-size: 4vw;
-  }
-
-  .prod-grid{    
-      grid-template-columns: repeat(2,1fr);
-      grid-template-rows: repeat(4,1fr);        
+  .prod-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 }
 
 /* CELULARES */
-@media screen and (max-width:767px){
-  h2{
-      font-size: 3vw;
+@media screen and (max-width: 767px) {
+  .logo-text {
+    display: none;
+  }
+  .login-text {
+    display: none;
+  }
+  .prod-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .logo-text{
-      display: none;
-  }
-  .login-text{
-      display: none;
-  }
-  .prod-grid{    
-      grid-template-columns: repeat(1,1fr);             
-  }
-
-  #footer{
-      flex-direction: column;
-      justify-content: center;
+  #footer {
+    flex-direction: column;
+    justify-content: center;
   }
 }
-
