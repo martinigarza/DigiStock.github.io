@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Kanit', sans-serif !important;
   margin: 0;
   padding: 0;
 }
@@ -333,6 +334,27 @@ h2 {
 }
 
 */
+
+.main-title {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+.acotacion {
+  animation-duration: 2.5s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 
 @keyframes menuAnimationIn {
   from {
