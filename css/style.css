@@ -125,7 +125,7 @@ h2 {
 .contact {
   background-color: #fff5e0;
   text-align: center;
-  padding: 60px 0;
+ /* padding: 60px 0;*/
 }
 
 .footer {
@@ -238,6 +238,17 @@ h2 {
 
 .footer-text {
   color: white;
+}
+
+.error{
+  color: red;
+  margin-bottom: 5px;
+}
+
+.form-container {
+  max-width: 600px; /* Establece el ancho máximo deseado */
+  margin: auto; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Añade un relleno alrededor del formulario si es necesario */
 }
 /*
 .contact2 {
@@ -443,7 +454,13 @@ h2 {
   .prod-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-
+  .contact {
+    padding: 80px;
+  }
+  .form-container {
+      padding: 0px 0; 
+  }
+ 
   #footer {
     flex-direction: column;
     justify-content: center;
